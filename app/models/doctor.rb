@@ -1,6 +1,6 @@
 class Doctor
 
-    attr_accessor :name, :year 
+    attr_accessor :name, :year
     attr_reader :speciality
     @@all = []
     def initialize(name, speciality, year = 1)
@@ -20,5 +20,22 @@ class Doctor
 
     def self.all
         @@all
+    end 
+   #having trouble with these deliverables
+   
+    def patients       
+        Patient.all.map do |doctor|
+            doctor == self
+        end 
+    #the return for this method was when I called d1.patients => [false, false, false, false]
+
+    #def discharge_patient
+     #   if Patient.doctor == doctor
+      #      @doctor = nil
+       # end 
+
+       def transfer_patient
+
+       end 
     end 
 end 
