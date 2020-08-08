@@ -24,18 +24,26 @@ class Doctor
    #having trouble with these deliverables
    
     def patients       
-        Patient.all.map do |doctor|
-            doctor == self
-        end 
-    #the return for this method was when I called d1.patients => [false, false, false, false]
+        patients = Patient.all.select do |patient|
+          patient.doctor == self
+        end
 
-    #def discharge_patient
-     #   if Patient.doctor == doctor
-      #      @doctor = nil
-       # end 
-
-       def transfer_patient
-
-       end 
+        # patients.map do |patient|
+        #   patient.name
+        # end
     end 
+    
+
+   # def discharge_patient(patient)       
+    #  if patients.include?(patient)
+     #   patient.doctor = nil
+     # end 
+    #end 
+
+    #def transfer_patient(patient, doctor)
+     # if patients.include?(patient)
+      #  patient.doctor = doctor
+      #end 
+   #end
 end 
+
